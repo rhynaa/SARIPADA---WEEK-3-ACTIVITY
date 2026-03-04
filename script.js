@@ -60,3 +60,8 @@ themeToggle.addEventListener("click", () => {
     themeToggle.textContent = isDark ? "☀️" : "🌙";
     localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+
+
+// When I click a nav item or the menu button, the code updates isMenuOpen and activeLink to track the menu and active link.
+// When I click a nav item, setTimeout shows the loading overlay for 2 seconds before hiding it.
+// When I click a nav item, the click also triggers the appContainer listener because of event bubbling.
