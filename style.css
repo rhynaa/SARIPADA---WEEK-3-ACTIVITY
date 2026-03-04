@@ -1,0 +1,265 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f5f7fb;
+    color: #333;
+}
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1e293b;
+    color: #fff;
+    padding: 16px 26px;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    z-index: 200;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+#topNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 16px 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.brand {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.brand-logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2563eb;
+    text-align: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+
+.nav-links-row {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links-row a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #334155;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links-row a:hover {
+    background-color: #e0e7ff;
+    color: #1d4ed8;
+}
+
+.nav-item.active {
+    background-color: #2563eb;
+    color: #fff;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #334155;
+}
+
+.theme-toggle {
+    background: #e5e7eb;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.theme-toggle:hover {
+    background: #d1d5db;
+}
+
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: #000000;
+    overflow-x: hidden;
+    transition: width 0.4s ease;
+    padding-top: 70px;
+    z-index: 100;
+}
+
+.sidenav .nav-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidenav a {
+    color: #cbd5f5;
+    font-size: 18px;
+    padding: 12px 30px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidenav a:hover,
+.sidenav a.active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 36px;
+    color: #cbd5f5;
+    padding: 0 12px;
+}
+
+@media (max-width: 768px) {
+    .nav-links-row {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .theme-toggle {
+        margin-right: 10px;
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+    #topNavbar {
+        gap: 10px;
+    }
+}
+
+body.dark {
+    background-color: #000000;
+    color: #f1f5f9;
+}
+
+body.dark #topNavbar {
+    background: #000000;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #111;
+}
+
+body.dark .brand,
+body.dark .brand-logo {
+    color: #3b82f6;
+}
+
+body.dark .nav-links-row a {
+    color: #e5e7eb;
+}
+
+body.dark .nav-links-row a:hover {
+    background: #111111;
+    color: #60a5fa;
+}
+
+body.dark .nav-item.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+body.dark .sidenav {
+    background: #000000;
+    border-right: 1px solid #111;
+}
+
+body.dark .sidenav a {
+    color: #e5e7eb;
+}
+
+body.dark .sidenav a:hover,
+body.dark .sidenav a.active {
+    background: #111111;
+    color: #ffffff;
+}
+
+body.dark .theme-toggle {
+    background: #111111;
+    color: #facc15;
+}
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.loader {
+    background: #ffffff;
+    padding: 32px 40px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+body.dark .loader {
+    background: #000000;
+}
+
+.loader p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #334155;
+}
+
+body.dark .loader p {
+    color: #f1f5f9;
+}
+
+.spinner {
+    width: 42px;
+    height: 42px;
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
