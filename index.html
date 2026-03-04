@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="notification" class="notification hidden"></div>
+
+    <div id="appContainer">
+        <header id="topNavbar">
+            <div class="brand">ByteBrew</div>
+
+            <ul class="nav-links-row">
+                <li><a href="#" class="nav-item">Home</a></li>
+                <li><a href="#" class="nav-item">About</a></li>
+                <li><a href="#" class="nav-item">Services</a></li>
+                <li><a href="#" class="nav-item">Contact</a></li>
+            </ul>
+
+            <button id="themeToggle" class="theme-toggle">🌙</button>
+            <div class="hamburger" id="openMenuBtn">&#9776;</div>
+        </header>
+
+        <div id="sideNavbar" class="sidenav">
+            <div class="brand-logo">ByteBrew</div>
+            <a href="#" class="closebtn" id="closeMenuBtn">&times;</a>
+
+            <div class="nav-links-column">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Services</a>
+                <a href="#" class="nav-item">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay hidden">
+        <div class="loader">
+            <div class="spinner"></div>
+            <p>Loading page...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
